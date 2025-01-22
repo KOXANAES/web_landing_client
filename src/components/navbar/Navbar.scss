@@ -1,0 +1,75 @@
+@import '../../App.scss';
+
+
+nav { 
+    height: $navbar_height;
+    min-height: $min_navbar_height;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid $border_line;
+    color: $pale_white;
+}
+.nav_tileContainer { 
+    display: flex;
+    gap: 2%;
+}
+.navbar_tile { 
+    align-self: center;
+    text-wrap: nowrap;
+}
+.navbar_tile:hover { 
+    color: $orange;
+}
+.navbar_link {
+    display: block;
+    height: inherit;
+    text-decoration: none;
+    color: $pale_white;
+    transition: .25s ease;
+    &:hover {color: $orange}
+}
+.logo { 
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    transition: .25s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    &:hover #logo_desc {color: $orange}
+}
+#logo_img { 
+    max-width: 35px;
+    height: auto;
+    
+}
+#logo_desc { 
+    color: $white;
+    font-size: $font_large;
+}
+
+.hamburger-wrapper {
+    display: none;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-wrapper {display: flex}
+    .navbar_tile {display: none}
+}
+
+.navbar_download_btn { 
+    background-color: transparent;
+    border: 0;
+    color: $pale_white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .25s ease;
+    &:hover {
+        color: $orange;
+    }
+}

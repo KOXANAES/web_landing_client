@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+.download-window__variant {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: $orange;
+}
+.download-window__icon, .download-window__variant { 
+    display: flex;
+    align-items: center;
+}
+.download-window__icon {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#svg-logo-img {
+    padding-right: 10px;
+}
+.main_download_button { 
+    background-color: $orange;
+    text-decoration:  underline;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .25s ease;
+    font-weight: bold;
+    &:hover {background-color: $orangeSelected}
+}
+.second_download_button { 
+    background-color: transparent;
+    border: 0;
+    color: $orange;
+    font-size: 16px;
+}
+@media screen and (max-width: 1000px) {
+    .page__wrapper__window, .mainDownloadWindow {width: 80vw}
+}
+@media screen and (max-width: 768px) {
+    .download-window__option {display: none;}
+    .download-window__variant {justify-content: center;}
+    .download-window__icon {pointer-events: all; text-decoration: underline}
+}
+

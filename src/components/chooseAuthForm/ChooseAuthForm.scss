@@ -1,0 +1,27 @@
+@import '@/App.scss';
+
+.chooseForm { 
+    display: flex;
+    justify-content: center;
+}
+.chooseAuthForm-btn {
+    display: block;
+    height: 50px;
+    flex: 1;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+    color: $pale_white;
+    font-size: 16px;
+    transition: .25s ease;
+}
+.chooseAuthForm-btn-active { 
+    font-size: 18px;
+    color: white;
+}
+#chooseForm_login-btn { 
+    text-align: end;
+}
+#chooseForm_reg-btn { 
+    text-align: start;
+}

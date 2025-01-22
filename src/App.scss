@@ -1,0 +1,35 @@
+@font-face {font-family: 'Montserrat'; src: url('./assets/fonts/Montserrat-Regular.ttf') format('woff2')}
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat'}
+
+
+$themeColor2: rgb(52, 52, 52);
+$orangeSelected: rgb(240, 159, 105);
+$green: rgb(13,246,155);
+$pale_white: rgba(255,255,255,.5);
+$gray: rgba(187, 187, 187, 0.623);
+$red: red;
+
+
+$darkThemeColor1: rgb(19, 19, 19); 
+$darkThemeColor0: rgb(35, 35, 35); 
+
+$white: rgb(255,255,255);
+$orange: rgb(242,114,28);
+
+$border_line: rgb(53, 53, 53);
+$pale_white: rgba(255,255,255,.5);
+
+$font_main: 90px;
+$font_large: 20px;
+$font_default: 14px;
+
+$navbar_height: 5vh;
+$min_navbar_height: 48px;
+
+body { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $darkThemeColor1;
+}
+

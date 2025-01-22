@@ -1,0 +1,59 @@
+@import '../../../App.scss';
+
+main { 
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  gap: 30px;
+}
+
+.main__logo, .main__description {display: flex}
+.main__logo { 
+  border-radius: 40px;
+  background-color: $darkThemeColor0;
+}
+#main__logo-img { 
+  width: 200px;
+  height: 100%;
+  padding: 10px;
+  pointer-events: none;
+}
+.main__description { 
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#main__version { 
+  color: $pale_white;
+  text-decoration: underline;
+}
+#main__project-name { 
+  color: $orange;
+  font-size: $font-main;
+}
+@media screen and (max-width: 1000px) {
+  #main__project-name {font-size: $font-main - 20px}
+  #main__logo-img {width: 150px}
+  .main__logo {border-radius: 30px;}
+}
+@media screen and (max-width: 768px) {
+  .main__logo {border-radius: 24px;}
+  #main__logo-img {width: 120px}
+  #main__project-name {font-size: $font-main - 30px}
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+  }
+  .main__logo, .main__description {align-items: center;}
+  #main__logo-img {
+    max-width: 200px;
+  }
+}

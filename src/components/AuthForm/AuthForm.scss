@@ -1,0 +1,20 @@
+.authForm { 
+    padding: 10px;
+}
+.form_input_wrapper { 
+    display: flex;
+}
+.form_input_select_form { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.form_input_description { 
+    flex: 1;
+}
+
+
+.orange-btn { 
+    display: block;
+    width: 100%;
+}
