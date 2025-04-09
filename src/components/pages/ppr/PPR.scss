@@ -3,4 +3,10 @@
 .ppr_table { 
     margin: auto;
     color: $white;
+    text-align: center;
+}
+
+.ppr_table_header { 
+    display: flex;
+    justify-content: space-between;
 }

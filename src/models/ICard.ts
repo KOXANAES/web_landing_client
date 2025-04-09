@@ -24,10 +24,16 @@ export interface ICard {
     creationDate?: Date;
     inspectionDate?: Date;
     inspectionDeadline?: Date;
-    creatorId: string;
-    inspectorId: string;
     instructured?: number;
     isWithSocials?: boolean;
+    
+    creatorUsername: string
+    inspectorUsername: string
+
+    formattedInspectionDate: any
+    formattedCreationDate: any
+    formattedInspectionDeadline: any
+
 }
 
 export enum HomeType {
