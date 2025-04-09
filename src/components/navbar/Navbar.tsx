@@ -6,8 +6,7 @@ import { Pivot as Hamburger } from 'hamburger-react'
 
 import { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ABOUT_ROUTE, ACC_ROUTE, MAIN_ROUTE, SUPPORT_ROUTE, VERSIONS_ROUTE } from '../../router/Contst'
-import { handleAppDownload } from '../logic/handleAppDownload'
+import { ABOUT_ROUTE, ACC_ROUTE, MAIN_ROUTE, MOBILE_APP_ROUTE, PPR_ROUTE, SUPPORT_ROUTE, VERSIONS_ROUTE } from '../../router/Contst'
 import { Context } from '../../main'
 
 function Navbar() {
@@ -15,34 +14,33 @@ function Navbar() {
   const {authStore} = useContext(Context)
 
   const [isOpen, setOpen] = useState(false)
-  
-  const onDownloadClick = () => {
-    handleAppDownload(authStore);
-  };
 
   const handleBurgerMenuClick = () => { 
-    alert(isOpen)
+    // there will be logic
   }
+
+  const navItems = [
+    { route: PPR_ROUTE, label: 'ППР' },
+    { route: MOBILE_APP_ROUTE, label: 'Мобильное приложение' },
+    { route: VERSIONS_ROUTE, label: 'Обновления/Версии' },
+    { route: SUPPORT_ROUTE, label: 'Поддержка' },
+    { route: ABOUT_ROUTE, label: 'О проекте' },
+];
 
     return (
       <nav>
         <div className='nav_tileContainer'>
-          <div className=' logo'>
+          <div className='logo'>
             <NavLink to={MAIN_ROUTE}><img id='logo_img' src={logo} alt=''/></NavLink>
             <NavLink className='navbar_link' to={MAIN_ROUTE} id='logo_desc'>Embera</NavLink>
           </div>
-          <div className='navbar_tile'>
-            <button className='navbar_download_btn' onClick={() => onDownloadClick()}>Скачать</button>
-          </div>
-          <div className='navbar_tile'>
-            <NavLink className='navbar_link' to={VERSIONS_ROUTE}>Обновления/Версии</NavLink>
-          </div>
-          <div className='navbar_tile'>
-            <NavLink className='navbar_link' to={SUPPORT_ROUTE}>Поддержка</NavLink>
-          </div>
-          <div className='navbar_tile'>
-            <NavLink className='navbar_link' to={ABOUT_ROUTE}>О проекте</NavLink>
-          </div>
+          {navItems.map((item, index) => (
+                <div className="navbar_tile" key={index}>
+                    <NavLink className="navbar_link" to={item.route}>
+                        {item.label}
+                    </NavLink>
+                </div>
+            ))}
         </div>
         <div className='nav_tileContainer'>
           <div className='navbar_tile'>
@@ -58,6 +56,22 @@ function Navbar() {
             onToggle={() => handleBurgerMenuClick()}
            />
         </div>
+        {isOpen ? 
+          <div className='dropd_mobmenu'>  
+            <div className='dropd_mobmenu_mainmenu'>
+              {navItems.map((item, index) => (
+                  <div className="dropdown_menu_tile" key={index}>
+                      <NavLink className="navbar_link" to={item.route}>
+                          {item.label}
+                      </NavLink>
+                  </div>
+              ))}
+            </div>
+          </div> 
+          :
+          <></>
+        }
+        
       </nav>
     )
   }

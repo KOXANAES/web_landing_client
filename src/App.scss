@@ -1,5 +1,10 @@
-@font-face {font-family: 'Montserrat'; src: url('./assets/fonts/Montserrat-Regular.ttf') format('woff2')}
-* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat'}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-Regular.woff') format('woff'),
+         url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat'}
 
 
 $themeColor2: rgb(52, 52, 52);

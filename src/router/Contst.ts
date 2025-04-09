@@ -1,4 +1,6 @@
 export const MAIN_ROUTE = '/'
+export const MOBILE_APP_ROUTE = '/mobileapp'
+export const PPR_ROUTE = '/ppr'
 export const DOWNLOAD_ROUTE = '/download'
 export const VERSIONS_ROUTE = '/versions'
 export const SUPPORT_ROUTE = '/support'
