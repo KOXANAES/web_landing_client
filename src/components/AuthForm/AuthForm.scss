@@ -1,18 +1,22 @@
+@use '../../App.scss' as *;
+
 .authForm { 
-    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 350px;
+    border: 1px solid $darkThemeColor0;
+    border-radius: 10px;
 }
 .form_input_wrapper { 
     display: flex;
+    justify-content: center;
 }
 .form_input_select_form { 
-    flex: 1;
     display: flex;
     flex-direction: column;
 }
-.form_input_description { 
-    flex: 1;
-}
-
 
 .orange-btn { 
     display: block;

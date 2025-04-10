@@ -23,13 +23,14 @@
 }
 .main_download_button { 
     background-color: $orange;
-    text-decoration:  underline;
     border: 0;
     padding: 10px;
     border-radius: 10px;
     transition: .25s ease;
     font-weight: bold;
-    &:hover {background-color: $orangeSelected}
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .second_download_button { 
     background-color: transparent;

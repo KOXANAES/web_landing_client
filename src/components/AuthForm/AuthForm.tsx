@@ -43,7 +43,6 @@ const AuthForm:FC<AuthFormProps> = ({chooseForm, setChooseForm}) => {
                 type='text' 
                 placeholder='Ваше имя'
               />
-              <p>{authStore.isAuth ? 'Добро пожаловать!' : 'Войтите в аккаунт' }</p>
             </>
           : 
             <> 
@@ -62,14 +61,11 @@ const AuthForm:FC<AuthFormProps> = ({chooseForm, setChooseForm}) => {
           </>
           }
         </div>
-        <div className='form_input_description'>
-          123
-        </div>
       </div>
       {chooseForm ?
-        <button className='orange-btn' onClick={() => authStore.registration(email, password, username)}>Регистрация</button>
+        <button className='ppr_btn' onClick={() => authStore.registration(email, password, username)}>Регистрация</button>
       : 
-        <button className='orange-btn' onClick={() => authStore.login(email, password)}>Логин</button>
+        <button className='ppr_btn' onClick={() => authStore.login(email, password)}>Логин</button>
       }
     </div>   
     )

@@ -4,4 +4,5 @@ export interface IUser {
     email: string;
     isActivated: boolean;
     role: string;
+    avatar: string | undefined 
 }

@@ -1,0 +1,12 @@
+@use '../../App.scss' as *;
+
+
+.notAuthWarning {
+    margin-top: calc(100vh/3 - $navbar_height);
+    text-align: center;
+    color: $red;
+
+    .notAuthWarning_warning { 
+        margin-bottom: 2%;
+    }
+}

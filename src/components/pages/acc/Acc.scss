@@ -1,0 +1,5 @@
+@use '../../../App.scss' as *;
+
+.acc_container { 
+    margin-top: calc(100vh/3 - $navbar_height);
+}

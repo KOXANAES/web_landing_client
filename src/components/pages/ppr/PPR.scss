@@ -2,11 +2,82 @@
 
 .ppr_table { 
     margin: auto;
+    margin-top: 100px;
     color: $white;
     text-align: center;
-}
+    border-collapse: collapse;
 
+    width: 70%;
+    overflow-x: auto;
+
+    tr:not(:nth-child(-n+1)):hover { 
+        background-color: $pale_white;
+        transition: .25s ease;
+    }
+    tr:nth-child(odd) {background-color: $darkThemeColor0;}
+
+    th, td {padding: 10px}
+
+}
 .ppr_table_header { 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    .ppr_table_header_left_auth { 
+        display: flex;
+        align-items: center;
+    }
+}
+
+.ppr_user_username { 
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px 5px 0px 10px;
+}
+.ppr_user_role { 
+    margin: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+.ppr_btn { 
+    background-color: $orange;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .25s ease;
+    font-weight: bold;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.filter_inp { 
+    background-color: $darkThemeColor0;
+    border: 0;
+    color:  $pale_white;
+    padding: 10px;
+    font-size: 14px;
+    text-wrap: nowrap;
+}
+
+.input_date { 
+    background-color: $darkThemeColor0;
+    color: $pale_white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px; 
+}
+
+.pag_btn { 
+    background-color: $orange;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+    &:hover { 
+        text-decoration: underline;
+    }
 }

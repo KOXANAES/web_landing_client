@@ -36,7 +36,7 @@ function Navbar() {
           </div>
           {navItems.map((item, index) => (
                 <div className="navbar_tile" key={index}>
-                    <NavLink className="navbar_link" to={item.route}>
+                    <NavLink className={({ isActive }) => (isActive ? 'navbar_link active' : 'navbar_link')} to={item.route} >
                         {item.label}
                     </NavLink>
                 </div>
