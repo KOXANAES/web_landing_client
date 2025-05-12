@@ -46,8 +46,9 @@ function PPR() {
   //filters
   const [selectedCity, setSelectedCity] = useState<string>('');
   const [selectedStreet, setSelectedStreet] = useState<string>('');
-  const [selectedHome, setSelectedHome] = useState<string>('');
   const [selectedInspector, setSelectedInspector] = useState<string>('');
+
+  const [searchHome, setSearchHome] = useState<string>('');
   const [searchApartment, setSearchApartment] = useState<string>('');
   
   const [selectedCreationDate, setSelectedCreationDate] = useState<string>('');
@@ -60,8 +61,8 @@ function PPR() {
   const handleStreetChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedStreet(event.target.value);
   };
-  const handleHomeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedHome(event.target.value);
+  const handleHomeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchHome(event.target.value);
   };
   const handleApartmentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchApartment(event.target.value);
@@ -87,8 +88,8 @@ function PPR() {
   const filteredCards = cardsPicked.filter(card => {
     const cityMatch = selectedCity ? card.city === selectedCity : true;
     const streetMatch = selectedStreet ? card.street === selectedStreet : true;
-    const homeMatch = selectedHome ? card.home === selectedHome : true;
     const inspectorMatch = selectedInspector ? card.inspectorUsername === selectedInspector : true;
+    const homeMatch = searchHome ? card.home?.toString().includes(searchHome) : true;
     const apartmentMatch = searchApartment ? card.apartment?.toString().includes(searchApartment) : true;
     const creationDateMatch = selectedCreationDate ? card.formattedCreationDate === selectedCreationDate : true;
     const inspectionDateMatch = selectedInspectionDate ? card.formattedInspectionDate === selectedInspectionDate : true;
@@ -159,12 +160,13 @@ function PPR() {
               </select>
             </th>
             <th>
-              <select className='filter_inp' value={selectedHome} onChange={handleHomeChange}>
-              <option value="">Все улицы</option>
-              {uniqueHomes.map(home => (
-                <option key={home} value={home}>{home}</option>
-              ))}
-              </select>
+            <input
+                className='filter_inp'
+                type="text"
+                value={searchHome}
+                onChange={handleHomeChange}
+                placeholder="Номер дома"
+              />
             </th>
             <th>
               <input

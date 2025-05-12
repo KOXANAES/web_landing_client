@@ -6,7 +6,6 @@
     color: $white;
     text-align: center;
     border-collapse: collapse;
-
     width: 70%;
     overflow-x: auto;
 
@@ -17,7 +16,6 @@
     tr:nth-child(odd) {background-color: $darkThemeColor0;}
 
     th, td {padding: 10px}
-
 }
 .ppr_table_header { 
     display: flex;

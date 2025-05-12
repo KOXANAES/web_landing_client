@@ -6,7 +6,7 @@ import { Pivot as Hamburger } from 'hamburger-react'
 
 import { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ABOUT_ROUTE, ACC_ROUTE, MAIN_ROUTE, MOBILE_APP_ROUTE, PPR_ROUTE, SUPPORT_ROUTE, VERSIONS_ROUTE } from '../../router/Contst'
+import { ABOUT_ROUTE, ACC_ROUTE, AI_ROUTE, MAIN_ROUTE, MOBILE_APP_ROUTE, PPR_ROUTE, SUPPORT_ROUTE, VERSIONS_ROUTE } from '../../router/Consts'
 import { Context } from '../../main'
 
 function Navbar() {
@@ -25,6 +25,7 @@ function Navbar() {
     { route: VERSIONS_ROUTE, label: 'Обновления/Версии' },
     { route: SUPPORT_ROUTE, label: 'Поддержка' },
     { route: ABOUT_ROUTE, label: 'О проекте' },
+    { route: AI_ROUTE, label: 'AI'}
 ];
 
     return (
